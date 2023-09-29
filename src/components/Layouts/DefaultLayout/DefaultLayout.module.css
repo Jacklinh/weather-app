@@ -208,7 +208,7 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 .mainScreen {
-    background-image: url(./images/wallpaper.jpg);
+    background-image: url(../../../../public/images/wallpaper.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
