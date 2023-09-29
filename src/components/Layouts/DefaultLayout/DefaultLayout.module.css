@@ -1,0 +1,285 @@
+.iphone {
+    width: 375px;
+    height: 667px;
+    border-radius: 45px;
+    position: relative;
+    margin: 2em auto;
+}
+.iphone:before,
+.iphone:after,
+.botones:before,
+.botones:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 6px;
+    height: 7px;
+    z-index: 1;
+}
+.iphone:before {
+    top: 1px;
+    right: 70px;
+}
+.iphone:after {
+    bottom: -1px;
+    left: 70px;
+}
+.iphone_border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #152839;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 0 3px 1px #ffffff;
+    border-radius: 45px;
+    position: relative;
+}
+.iphone_border:before,
+.iphone_border:after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 7px;
+    height: 6px;
+    z-index: 1;
+}
+.botones:before,
+.iphone_border:before {
+    left: 0;
+}
+.botones:after,
+.iphone_border:after {
+    right: 0;
+}
+.botones > * {
+    position: absolute;
+    left: -3px;
+    width: 3px;
+    background: linear-gradient(90deg, transparent, #152839);
+    border-radius: 20px 10px 10px 20px;
+}
+.botones .switch {
+    top: 100px;
+    height: 25px;
+}
+.botones .vol {
+    top: 150px;
+    height: 45px;
+}
+.botones .vol.down {
+    top: 210px;
+}
+.botones .touchID {
+    top: 160px;
+    right: -3px;
+    left: auto;
+    height: 80px;
+    background: linear-gradient(90deg, #152839, transparent);
+    border-radius: 10px 20px 20px 10px;
+}
+.bordeNegro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    border-radius: 40px;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+.bordeNegro:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    border: 7px solid #000000;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 100;
+}
+.notch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 32px;
+    border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px;
+    background-color: #000000;
+    z-index: 100;
+}
+.notch:before,
+.notch:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+}
+.notch:before:before {
+    left: -17px;
+    border-right-color: #000000;
+    transform: rotate(-50deg);
+}
+.notch:before:after {
+    right: -17px;
+    border-left-color: #000000;
+    transform: rotate(50deg);
+}
+.bocina {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    width: 40px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #1b1b1b;
+    border: 0.7px solid #171717;
+    box-shadow: inset 0px -0.3px 1px 0px #8c8c8c;
+    position: relative;
+    overflow: hidden;
+}
+.bocina:before {
+    width: 0;
+    height: 60%;
+    transform: skew(-10deg);
+    box-shadow: 1px 0 0px 0.2px #313131, 2px 0 0px 0.2px #313131, 3px 0 0px 0.2px #313131, 4px 0 0px 0.2px #313131, 5px 0 0px 0.2px #313131, 6px 0 0px 0.2px #313131, 7px 0 0px 0.2px #313131, 8px 0 0px 0.2px #313131, 9px 0 0px 0.2px #313131, 10px 0 0px 0.2px #313131, 11px 0 0px 0.2px #313131, 12px 0 0px 0.2px #313131, 13px 0 0px 0.2px #313131, 14px 0 0px 0.2px #313131, 15px 0 0px 0.2px #313131, 16px 0 0px 0.2px #313131, 17px 0 0px 0.2px #313131, 18px 0 0px 0.2px #313131, 19px 0 0px 0.2px #313131, 20px 0 0px 0.2px #313131, 21px 0 0px 0.2px #313131, 22px 0 0px 0.2px #313131, 23px 0 0px 0.2px #313131, 24px 0 0px 0.2px #313131, 25px 0 0px 0.2px #313131, 26px 0 0px 0.2px #313131, 27px 0 0px 0.2px #313131, 28px 0 0px 0.2px #313131, 29px 0 0px 0.2px #313131, 30px 0 0px 0.2px #313131, 31px 0 0px 0.2px #313131, 32px 0 0px 0.2px #313131, 33px 0 0px 0.2px #313131, 34px 0 0px 0.2px #313131, 35px 0 0px 0.2px #313131, 36px 0 0px 0.2px #313131, 37px 0 0px 0.2px #313131, 38px 0 0px 0.2px #313131, 39px 0 0px 0.2px #313131;
+    content: '';
+    position: absolute;
+}
+.bocina:after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 0;
+    box-shadow: 1px -0.8px 0px 0.2px #313131, 1px 0px 0px 0.2px #313131, 1px 0.8px 0px 0.2px #313131;
+}
+.camera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    right: 35px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #1b1b1b;
+}
+.camera:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: radial-gradient(#000, #152839 60%);
+}
+.camera:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    margin-top: 2px;
+    margin-right: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.mainScreen {
+    background-image: url(./images/wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    border-radius: 32px;
+    background-color: #ffffff;
+    background-color: transparent;
+    background-blend-mode: soft-light;
+    position: relative;
+    overflow: hidden;
+    transition: ease all 1s;
+}
+.statusBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    height: 20px;
+    padding: 5px 20px 0px 20px;
+    padding-right: 12px;
+    transition: ease all 0.1s;
+    position: relative;
+    z-index: 1;
+    cursor: grab;
+}
+.leftSide {
+    color: #ffffff;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+.rightSide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    position: relative;
+}
+.rightSide svg {
+    display: inline;
+    color: #ffffff;
+    margin: 0 4px;
+}
+.nav_links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.nav_links .list_link{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    gap: 0 20px;
+    padding: 5px 10px;
+    background-color: #332c2c;
+}
+.nav_links .list_link a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+.nav_links .list_link a.active {
+    color: var(--active-color);
+}

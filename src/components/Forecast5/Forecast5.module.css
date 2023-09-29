@@ -1,0 +1,136 @@
+.article_forecast {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+}
+.article_forecast h2 {
+    text-transform: uppercase;
+    color: var(--active-color);
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+.article_forecast h2 svg,
+.forecast_avghumidity svg,
+.date_year svg {
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+}
+.forecast_avghumidity svg {
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+.forecast_list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+.forecast_list .forecast_detail {
+    display: none;
+}
+.forecast_item {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.8rem;
+}
+.date_text {
+    display: none;
+}
+.forecast_item > div {
+    flex: 1 0 auto;
+}
+.forecast_icon {
+    width: 40px;
+    height: 40px;
+}
+.forecast_condition {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.forecast_temp p {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ttl svg{
+    display: inline-block;
+    margin-right: 6px;
+    position: relative;
+    top: -2px;
+}
+.line {
+    font-size: 0.6em;
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+.forecast_temp .max {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+.forecast_list li:first-child .forecast_detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+.forecast_list li:first-child .forecast_detail > div {
+    width: calc((100% - 10px) / 2);
+}
+.forecast_list li:first-child .forecast_item {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+.forecast_list li:first-child {
+    background-color: rgba(4, 9, 21, 0.88);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 4px 3px 10px #936e6e
+}
+.forecast_list li:first-child .date_text {
+    display: block;
+    color: var(--active-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.forecast_list li:first-child .date_year {
+    display: none;
+}
+.forecast_list li:first-child .max {
+    color: var(--active-color);
+    font-size: 1.5rem;
+}
+.forecast_list li:first-child svg {
+    color: var(--active-color);
+    font-size: 1.5rem;
+    margin-right: 4px;
+}
+.forecast_list li:first-child .line {
+    font-size: 1rem;
+}
+.forecast_list li:first-child .forecast_avghumidity {
+    font-size: 1.5rem;
+}
+.forecast_detail .ttl {
+    color: var(--active-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.forecast_detail .cnt {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
