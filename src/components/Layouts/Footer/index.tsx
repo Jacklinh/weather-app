@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from 'react-router-dom';
-import { TbHomeBolt, TbCalendarBolt } from "react-icons/tb";
+import { TbHomeBolt, TbCalendarBolt} from "react-icons/tb";
 import styles from '../DefaultLayout/DefaultLayout.module.css'
 
 const Footer = () => {

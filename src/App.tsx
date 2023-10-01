@@ -8,8 +8,6 @@ import Forecast5Day from './pages/Forecast5Day';
 import NoPage from './pages/NoPage';
 const queryClient = new QueryClient();
 function App() {
-
-
 	return (
 		<>
 			<QueryClientProvider client={queryClient}>

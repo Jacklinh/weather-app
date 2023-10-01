@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { weatherConfig } from '../../data/weatherConfig';
-import { WiDayStormShowers} from "react-icons/wi";
-import { BsCalendar3,BsFillCloudCheckFill,BsActivity,BsEye,BsDropletHalf,BsSunrise,BsSunset } from "react-icons/bs";
+import { PiCalendarCheckDuotone } from "react-icons/pi";
+import { BsCalendar3,BsEye,BsDropletHalf,BsSunrise,BsSunset } from "react-icons/bs";
 
 
 import styles from './Forecast5.module.css';
+import ForecastSkeleton from '../ForecastSkeleton';
 
 const fetchForecast5 = async () => {
     const response = await axios.get(`https://api.weatherapi.com/v1/${weatherConfig.forecast}.json?key=${weatherConfig.apiKey}&q=${weatherConfig.qname}&aqi=no&lang=${weatherConfig.lang}&days=${weatherConfig.day5}`);
@@ -45,7 +46,7 @@ const Forecast5 = () => {
     return (
         <>
             {isError && <p>Error: {error.message}</p>}
-            {isLoading && <p className='weather_loading'><WiDayStormShowers />...loading</p>}
+            {isLoading && <ForecastSkeleton />}
             {data &&
             <article className={styles.article_forecast}>
             <h2><BsCalendar3 /> Dự báo 5 ngày {data.location.name}</h2>
@@ -56,14 +57,15 @@ const Forecast5 = () => {
                         <div className={styles.forecast_item}>
                             <div className={styles.forecast_date}>
                                 <p className={styles.date_year}>
-                                    <BsFillCloudCheckFill /> {item.date.split('-')[2]} <span className={styles.line}> / </span>{item.date.split('-')[1]}
+                                    <PiCalendarCheckDuotone /> {item.date.split('-')[2]} <span className={styles.line}> / </span>{item.date.split('-')[1]}
                                 </p>
                                 <p className={styles.date_text}>Hôm nay</p>
-                                <p className={styles.forecast_avghumidity}><BsActivity />{Math.round(item.day.avghumidity)} %</p>
                             </div>
                             <div className={styles.forecast_condition}>
                                 <p className={styles.forecast_icon}><img src={item.day.condition.icon} alt="" /></p>
+                                <p className={styles.forecast_avghumidity}>{Math.round(item.day.avghumidity)} %</p>
                             </div>
+                            
                             <div className={styles.forecast_temp}>
                                 <p className={styles.min}>{Math.round(item.day.mintemp_c)}<span>&deg;</span>C</p><span className={styles.line}>/</span>
                                 <p className={styles.max}>{Math.round(item.day.maxtemp_c)}<span>&deg;</span>C</p>

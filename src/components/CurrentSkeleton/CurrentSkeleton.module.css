@@ -1,0 +1,21 @@
+.article_skeleton_heading {
+    width: 50%;
+    margin: 0 auto;
+}
+.article_skeleton_heading span {
+    margin-bottom: 35px;
+}
+.article_skeleton {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 10px;
+}
+.skeleton_current_item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 5px;
+    
+}
+.skeleton_current_item  li {
+    width: calc((100% - 10px) / 3);
+}

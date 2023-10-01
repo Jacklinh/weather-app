@@ -7,9 +7,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { weatherConfig } from '../../data/weatherConfig';
-import { WiDayStormShowers } from "react-icons/wi";
 import { FiMapPin,FiClock } from "react-icons/fi";
 import styles from './CurrentWeather.module.css';
+
+import 'react-loading-skeleton/dist/skeleton.css'
+import CurrentSkeleton from '../CurrentSkeleton';
 interface hourProps {
     temp_c: number,
     condition: {
@@ -51,12 +53,12 @@ const CurrentWeathher = () => {
     return (
         <>
             {isError && <p>Error: {error.message}</p>}
-            {isLoading && <p className='weather_loading'><WiDayStormShowers />...loading</p>}
+            {isLoading && <CurrentSkeleton />}
             {data &&
                 <>
                     <article className={`${styles.widget_weather} flex flex-col gap-y-4 justify-center items-center`}>
                         <h2 className={styles.weather_name}><FiMapPin />{data.location.name}</h2>
-                        <p className={styles.weather_icon}><img src={data.current.condition.icon} alt="" /></p>
+                        <p className={styles.weather_icon}><img src={data.current.condition.icon} alt=""  /></p>
                         <div className={styles.weather_data}>
                             <p className={styles.weather_temp}>{Math.round(data.current.temp_c)}&deg;C</p>
                             <p className={styles.weather_description}>{data.current.condition.text}</p>
